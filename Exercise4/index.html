@@ -1,0 +1,56 @@
+<html>
+    <p id="bars" style="width:90%; border: 2px solid black;">What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown 
+        printer took a galley of type and scrambled it to make a type specimen book it has? <br> <br>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, 
+        venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
+         elementum semper nisi. Aenean vulputate eleifend tellus. 
+        Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+    </p>
+    Enter colors (0-FF): <br>
+    Red:&nbsp;<input id="bRed" type="text">
+    Green:&nbsp;<input id="bGreen" type="text">
+    Blue:&nbsp;<input id="bBlue" type="text">
+    Width:&nbsp;<input id="bWidth" type="number">
+    <button id="border">Change Border</button>
+    <br>
+    Red:&nbsp;<input id="bgRed" type="text">
+    Green:&nbsp;<input id="bgGreen" type="text">
+    Blue:&nbsp;<input id="bgBlue" type="text">
+    <button id="background">Change Background Color</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("border").addEventListener("click", () => {
+                let r = document.getElementById("bRed").value;
+                let g = document.getElementById("bGreen").value;
+                let b = document.getElementById("bBlue").value;
+                let color = r + g + b;
+                if (/^[0-9a-f]{6}$/i.test(color)){
+                    document.getElementById("bars").style.borderColor = "#" + color;
+                }
+                else{
+                    alert("Invalid input!");
+                }
+                let width = document.getElementById("bWidth").value;
+                if (width !== ""){
+                    document.getElementById("bars").style.borderWidth = width + "px ";
+                }
+            });
+            document.getElementById("background").addEventListener("click", () => {
+                let r = document.getElementById("bgRed").value;
+                let g = document.getElementById("bgGreen").value;
+                let b = document.getElementById("bgBlue").value;
+                let color = r + g + b;
+                if (/^[0-9a-f]{6}$/i.test(color)){
+                    document.getElementById("bars").style.backgroundColor = "#" + color;
+                }
+                else{
+                    alert("Invalid input!");
+                }
+            });
+        })
+    </script>
+</html>

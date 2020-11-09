@@ -1,0 +1,40 @@
+html {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: rgb(238, 65, 94);
+    color: white;
+}
+
+img {
+    text-align: center;
+    padding: 10px;
+    width: 300;
+    height: 350;
+}
+
+p {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a {
+    text-align: left;
+    padding: 10 px;
+}
+
+.links {
+    margin: 10px;
+}
+
+.links:hover {
+    background-color: lightgrey;
+}
+
+.pic {
+    background-image: url(back.jpg);
+}

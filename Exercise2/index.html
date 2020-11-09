@@ -1,0 +1,38 @@
+<html>
+    <button id="back" onclick= "back()">Previous</button>
+    <img name="img" src = "one.jpeg" width = "500" height = "600">
+    <button id="next" onclick= "next()">Next</button>
+    <br />
+    <span id="result"></span>
+    <script>
+        var pics = [];
+        var num = 0;
+        pics[0] = 'one.jpeg';
+        pics[1] = 'two.jpg';
+        pics[2] = 'three.JPG';
+        pics[3] = 'four.jpg';
+        pics[4] = 'five.PNG';
+        function back() 
+        {
+            if(num > 0) {
+            num --;
+            document.img.src = pics[num];
+            }
+            else {
+                document.img.src = pics[4];
+                num = 4;
+            }
+        }
+        function next() 
+        {
+            if(num < 4) {
+            num ++;
+            document.img.src = pics[num];
+            }
+            else {
+                document.img.src = pics[0];
+                num = 0;
+            }
+        }
+    </script>
+</html>
